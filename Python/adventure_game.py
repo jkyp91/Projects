@@ -61,7 +61,7 @@ while True:
             input("Do something: ")
 
     if loc == 5:
-        delay_print("You are confronted by bigfoot"
+        delay_print("You are confronted by Bigfoot"
                     ". \"In order to proceed, Please guess my favourite body part\" he says, you have"
                     " 3 guesses: " + "\n")
         answer = "foot"
