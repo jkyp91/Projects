@@ -66,16 +66,16 @@ while True:
                     " 3 guesses: " + "\n")
         answer = "foot"
         guess = input("")
-        count_guesses = 0
+        count_guesses = 1
         guess_limit = 3
         while guess != answer and guess_limit > count_guesses:
-            count_guesses += 1
             print("{} more guesses until I eat your {}".format(guess_limit - count_guesses, guess))
+            count_guesses += 1
             guess = input("Try again")
             if guess == answer:
                 print("That sucks, you got it")
             else:
-                print("I'm going to enjoy eating your {}.... Hey, get back here!")
+                print("I'm going to enjoy eating your {}.... Hey, get back here!".format(guess))
                 print("You got away safely")
 
 
