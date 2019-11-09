@@ -21,7 +21,7 @@ def delay_print(phrase):
     for letter in phrase:
         sys.stdout.write(letter)
         sys.stdout.flush()
-        time.sleep(0.0)
+        time.sleep(0.02)
 
 
 loc = 1
@@ -73,7 +73,7 @@ while True:
             guess = input("")
             count_guesses += 1
             if guess == answer:
-                print("That sucks, you got it")
+                print("That sucks, you got it, you may continue unharmed")
                 break
             elif guess_limit - count_guesses > 0:
                 print("{} more guesses until I eat your {}".format(guess_limit - count_guesses, guess))
