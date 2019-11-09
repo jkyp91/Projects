@@ -2,7 +2,7 @@ import random
 import time
 import sys
 
-locations = {0: "You are sitting in front of a computer learning Python",
+locations = {0: "You Quit the Game!",
              1: "You are standing at the end of a road before a small brick building",
              2: "You are at the top of a hill",
              3: "You are inside a building, a well house for a small stream",
