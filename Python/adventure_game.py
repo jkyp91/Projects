@@ -79,7 +79,7 @@ while True:
                 print("You got away safely")
 
 
-    direction = input("Available exits are " + availableExits.upper() + '\n')
+    direction = input("Available exits are " + availableExits.upper() + '\n').upper()
     print()
     if direction in exits[loc]:
         loc = exits[loc][direction]
