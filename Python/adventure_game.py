@@ -71,11 +71,11 @@ while True:
         while guess != answer and guess_limit > count_guesses:
             print("{} more guesses until I eat your {}".format(guess_limit - count_guesses, guess))
             count_guesses += 1
-            guess = input("Try again")
+            guess = input("Try again" + "\n")
             if guess == answer:
                 print("That sucks, you got it")
             else:
-                print("I'm going to enjoy eating your {}.... Hey, get back here!".format(guess))
+                print("I'm going to enjoy eating your.... Hey, get back here!")
                 print("You got away safely")
 
 
