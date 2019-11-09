@@ -21,7 +21,7 @@ def delay_print(phrase):
     for letter in phrase:
         sys.stdout.write(letter)
         sys.stdout.flush()
-        time.sleep(0.1)
+        time.sleep(0.0)
 
 
 loc = 1
@@ -65,21 +65,23 @@ while True:
                     ". \"In order to proceed, Please guess my favourite body part\" he says, you have"
                     " 3 guesses: " + "\n")
         answer = "foot"
-        guess = input("")
-        count_guesses = 1
+        guess = ''
+        count_guesses = 0
         guess_limit = 3
         while guess != answer and guess_limit > count_guesses:
-            print("{} more guesses until I eat your {}".format(guess_limit - count_guesses, guess))
+            print("Guess a Body Part: ")
+            guess = input("")
             count_guesses += 1
-            guess = input("Try again" + "\n")
             if guess == answer:
                 print("That sucks, you got it")
-            else:
-                print("I'm going to enjoy eating your.... Hey, get back here!")
-                print("You got away safely")
+                break
+            elif guess_limit - count_guesses > 0:
+                print("{} more guesses until I eat your {}".format(guess_limit - count_guesses, guess))
+        else:
+            print("I'm going to enjoy eating your.... Hey, get back here!")
+            print("You got away safely")
 
-
-    direction = input("Available exits are " + availableExits.upper() + '\n').upper()
+    direction = input("Available exits are " + availableExits.upper() + ":" + '\n').upper()
     print()
     if direction in exits[loc]:
         loc = exits[loc][direction]
